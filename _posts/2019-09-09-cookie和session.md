@@ -1,14 +1,14 @@
 ---
-   layout: post             # 使用的布局（不需要改）
-   title:  cookie和session    # 标题 
-   subtitle: Hello cookie, Hello session #副标题
-   date: 2019-09-09              # 时间
-   author:keguniang                      # 作者
-   header-img: img/post-bg-hacker.jpg    #这篇文章标题背景图片
-   catalog: true                       # 是否归档
-   tags:                               #标签
-        - cookie
-        - session
+layout:     post                    # 使用的布局（不需要改）
+title:      cookie和session               # 标题 
+subtitle:   Hello cookie, Hello session #副标题
+date:       2017-02-06              # 时间
+author:     keguniang                      # 作者
+header-img: img/post-bg-hacker.jpg    #这篇文章标题背景图片
+catalog: true                       # 是否归档
+tags:                               #标签
+    - cookie
+    - session
 ---
 # cookie和session
 
