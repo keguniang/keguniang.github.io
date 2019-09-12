@@ -1,0 +1,80 @@
+---
+layout:     post                    # 使用的布局（不需要改）
+title:      whistle实现代理转发               # 标题 
+subtitle:   Hello JS, Hello whistle #副标题
+date:       2019-09-012              # 时间
+author:     keguniang                      # 作者
+header-img: img/post-bg-hacker.jpg    #这篇文章标题背景图片
+catalog: true                       # 是否归档
+tags:                               #标签
+    - whistle
+    - js
+---
+# whistle
+
+## 一、定义
+
+	1. **抓包：**(package capture)就是将 **网络传输** 发送与接收的  **数据包**  进行截获、重发、编辑、转存等操作，也用来**检查网络安全**或进行**数据截取**等。
+ 	2. **抓包工具：**是拦截查看网络数据包内容的软件。
+ 	3. [whistle](https://github.com/avwo/whistle)(读音[ˈwɪsəl]，拼音[wēisǒu])，<font color='red'>基于`Node`实现的跨平台(包括不限于:windows、mac）web调试代理工具</font>，类似的工具有Windows平台上的`Fiddler`，主要用于查看、修改HTTP/HTTPS/Websocket的请求、响应，也可以作为HTTP代理服务器使用。
+	4. **与Fiddler的不同：**
+
+	* Fiddler，通过断点修改响应的方式。
+	* whistle，采用的是类似配置系统Hosts的方式，一切操作都可以通过配置实现，支持域名、路径、正则表达式、通配符等多种匹配方式。
+
+## 二、whistle安装
+
+[文档链接](https://github.com/avwo/whistle/blob/master/README-zh_CN.md)
+
+whistle安装过程需要以下步骤（**缺一不可**）：
+
+1. 安装Node
+2. 安装whistle
+3. 启动whistle
+4. 配置代理
+5. 安装根证书
+
+上述步骤的详细操作分别参见如下文档：
+
+1. [安装启动whistle](http://wproxy.org/whistle/install.html)
+2. [安装whistle根证书](http://wproxy.org/whistle/webui/https.html)
+
+## 三、whistle使用
+
+1. 在命令提示符中开启 whistle
+
+2. 打开 ` http://127.0.0.1:8899/`
+
+3. 配置规则
+
+   ```
+   http://10.12.137.105:8080/Interactive_02/src/html/test.html?_ijt=c7sja2su041u5lil42oq692gng http://localhost:63342/Interactive_02/src/html/test.html?_ijt=c7sja2su041u5lil42oq692gng
+   ```
+
+4. 代码中 `jQuery`的本地连接改为CDN的链接,这个办法不能一劳永逸，可以使用文件替换
+
+   ```
+   10.12.137.105:8080/Interactive_02 E:\studyDocument\WebStormProjects\Interactive_02
+   ```
+
+5. 在浏览器中输入`http://10.12.137.105:8080/Interactive_02/src/html/test.html?_ijt=c7sja2su041u5lil42oq692gng`
+
+6. 看到返回结果
+
+访问线上的 https 域名实际上指向的是本地的 http 调试地址。
+
+```
+https://wq.jd.com http://localhost:9000
+```
+
+
+
+## 参考链接
+
+[【whistle】强大的web调试代理工具](https://www.jianshu.com/p/f700277faf7c)
+
+[Whistle使用简介](https://www.jianshu.com/p/3b483b416f9d)
+
+[用whistle实现map local](https://www.jianshu.com/p/b8de8eefba82)
+
+[whistle 使用实践](https://blog.csdn.net/cpongo3/article/details/90259142)
