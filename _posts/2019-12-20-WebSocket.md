@@ -1,6 +1,6 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-subtitle:   Hello JSd, Hello WebSocket #副标题
+subtitle:   Hello JS, Hello WebSocket #副标题
 date:       2019-12-20              # 时间
 author:     keguniang                      # 作者
 header-img: img/post-bg-e2e-ux.jpg    #这篇文章标题背景图片
@@ -18,7 +18,7 @@ tags:                               #标签
 >
 > 【半双工】：一个时间段内只有一个动作发生。举个例子：一条很窄的马路，同时只能有一辆车通过。所以当有两辆车对开，只能先等一辆车过去之后另一辆车再过。
 
-## 2. 作用
+## 2. 作用  
 
 使得客户端和服务端之间的数据交换变得更加简单，<font style="color:red">允许服务端主动向客户端推送数据。</font> 浏览器和服务器只需要完成一次握手，两者之间就可以创建持久性的连接，并进行双向数据传输。
 
@@ -122,7 +122,7 @@ if (ws.bufferedAmount === 0) {
 
 ## WebSocket 事件
 
-以下是 WebSocket 对象的相关事件。假定我们使用了以上代码创建了 Socket 对象：
+以下是 WebSocket 对象的相关事件。假定我们使用了以上代码创建了 Socket 对象:
 
 | 事件    | 事件处理程序     | 描述                       |
 | :------ | :--------------- | :------------------------- |
