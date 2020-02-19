@@ -1,14 +1,12 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      whistle实现代理转发               # 标题 
-subtitle:   Hello JS, Hello whistle #副标题
-date:       2019-09-12              # 时间
+title:      display:inline-block元素之间空隙的产生原因和解决办法               # 标题
+date:       2020-02-13              # 时间
 author:     keguniang                      # 作者
 header-img: img/post-bg-hacker.jpg    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
-    - whistle
-    - js
+    - css
 ---
 # display:inline-block元素之间空隙的产生原因和解决办法
 
